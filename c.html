@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alert Detail: Chiller P1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2a77f4',
+              'background-light': '#f5f7f8',
+              'background-dark': '#101722',
+            },
+            fontFamily: {
+              display: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light group/design-root dark:bg-background-dark">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-neutral-200/80 bg-white px-6 py-3 dark:border-neutral-800/80 dark:bg-background-dark md:px-10">
+<div class="flex items-center gap-4 text-neutral-800 dark:text-neutral-200">
+<span class="material-symbols-outlined text-2xl text-primary"> data_thresholding </span>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-neutral-800 dark:text-neutral-200">Energy Management System</h2>
+</div>
+<div class="hidden items-center gap-9 md:flex">
+<a class="text-sm font-medium leading-normal text-neutral-800 dark:text-neutral-200" href="index.html">Dashboard</a>
+<a class="text-sm font-medium leading-normal text-primary" href="b.html">Alerts</a>
+<a class="text-sm font-medium leading-normal text-neutral-800 dark:text-neutral-200" href="#">Reports</a>
+<a class="text-sm font-medium leading-normal text-neutral-800 dark:text-neutral-200" href="#">Settings</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-neutral-100 text-neutral-800 transition-colors hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700">
+<span class="material-symbols-outlined text-xl"> notifications </span>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-neutral-100 text-neutral-800 transition-colors hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700">
+<span class="material-symbols-outlined text-xl"> help </span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuUsltwvfXZcjddBbHbkls-MM22s7K0poJ5scWrwnca2wPt9fnIzg_JDJjWqusppIaOFu6SEbRqgjL9XP_nSs5GSjoDgVp9AEbJ4SaYyw9vnhpeFCM0DF4JjRxrmE10xmsIli8nyEY8mWe3ESUIiuPUsJfI0bX0mGtthRQyprwzC4y_riYJjSQ97p4451AyAU7drcYaspSWyVNSzkCeOt1KUpsJDOayWNmV0xWXidz4nUIvgAWl0UILTmTQCeLMv-ZbR7Bfe-5d9kG");'></div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex flex-1 justify-center p-4 sm:p-6 md:p-10">
+<div class="layout-content-container flex w-full max-w-5xl flex-1 flex-col gap-4">
+<!-- Back Button -->
+<div class="flex">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg px-2 py-2 text-sm font-bold leading-normal tracking-[0.015em] text-neutral-800 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800">
+<span class="material-symbols-outlined text-xl"> arrow_back </span>
+<span class="truncate" href="#b.html">Back to Alerts</span>
+</button>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap items-center justify-between gap-4 px-2">
+<div class="flex flex-col gap-1">
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-neutral-800 dark:text-neutral-200">Alert Detail: Chiller P1</h1>
+<p class="text-base font-normal leading-normal text-neutral-500 dark:text-neutral-400">Anomalous Consumption (+25%)</p>
+</div>
+</div>
+<!-- Chart -->
+<div class="flex flex-wrap gap-4 p-2">
+<div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-neutral-200/80 bg-white p-6 shadow-sm dark:border-neutral-800/80 dark:bg-background-dark">
+<p class="text-base font-medium leading-normal text-neutral-800 dark:text-neutral-200">Live Consumption (Last 6 Hours)</p>
+<div class="flex items-baseline gap-3">
+<p class="truncate text-[32px] font-bold leading-tight tracking-tight text-neutral-800 dark:text-neutral-200">150 kWh</p>
+<p class="text-base font-medium leading-normal text-red-500">+25%</p>
+</div>
+<p class="text-sm font-normal leading-normal text-neutral-500 dark:text-neutral-400">vs. expected consumption</p>
+<div class="flex min-h-[220px] flex-1 flex-col gap-8 py-4">
+<svg fill="none" height="100%" preserveaspectratio="none" viewbox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="chart-gradient" x1="237.5" x2="237.5" y1="1" y2="149">
+<stop stop-color="#2a77f4" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#2a77f4" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0 109C18.2692 109 18.2692 21 36.5385 21C54.8077 21 54.8077 41 73.0769 41C91.3462 41 91.3462 93 109.615 93C127.885 93 127.885 33 146.154 33C164.423 33 164.423 101 182.692 101C200.962 101 200.962 61 219.231 61C237.5 61 237.5 45 255.769 45C274.038 45 274.038 121 292.308 121C310.577 121 310.577 149 328.846 149C347.115 149 347.115 1 365.385 1C383.654 1 383.654 81 401.923 81C420.192 81 420.192 129 438.462 129C456.731 129 456.731 25 475 25" stroke="#2a77f4" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0 109C18.2692 109 18.2692 21 36.5385 21C54.8077 21 54.8077 41 73.0769 41C91.3462 41 91.3462 93 109.615 93C127.885 93 127.885 33 146.154 33C164.423 33 164.423 101 182.692 101C200.962 101 200.962 61 219.231 61C237.5 61 237.5 45 255.769 45C274.038 45 274.038 121 292.308 121C310.577 121 310.577 149 328.846 149C347.115 149 347.115 1 365.385 1C383.654 1 383.654 81 401.923 81C420.192 81 420.192 129 438.462 129C456.731 129 456.731 25 475 25V149H0V109Z" fill="url(#chart-gradient)"></path>
+</svg>
+<div class="flex justify-between">
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-neutral-500 dark:text-neutral-400">6h ago</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-neutral-500 dark:text-neutral-400">5h ago</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-neutral-500 dark:text-neutral-400">4h ago</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-neutral-500 dark:text-neutral-400">3h ago</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-neutral-500 dark:text-neutral-400">2h ago</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-neutral-500 dark:text-neutral-400">1h ago</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-neutral-500 dark:text-neutral-400">Now</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="flex px-2 py-3">
+<button class="flex h-12 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold leading-normal tracking-[0.015em] text-white transition-colors hover:bg-primary/90">
+<span class="truncate">Mark as Reviewed</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

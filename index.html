@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Energy Management Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#3B82F6", // Mapped from the user request's blue #3B82F6
+            "background-light": "#f5f7f8", // Using the provided light background
+            "background-dark": "#101722",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="flex h-full flex-1">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col gap-y-6 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark p-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Hotel Ficticia Logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyN-AmDjChoEDE_guzUgcJntKCcEwdmGmTmuGvE_M9ud7phDahhhQnTT9VAMlT15HbueVsyEyJzSswMP0MPNKHEKRDNMWXry18f-p64fbTDu6wmAn-nIa20vOE3xS3rrZfXDrA5YfQySPUUEftKSGhfhbLdaNdvwPh8ge4Z0EcUZCxrwMTZMLRYGbWWz3B83JQMwLPL6VejyWBqldSPxHfjPJQODd_FI9gRFyS1FkbluAxK2cfxLVK32dx2zgQ-gKZW5YthiHSLBqQ');"></div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-base font-medium leading-normal">Hotel Ficticia</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Santiago</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20" href="a.html">
+<span class="material-symbols-outlined text-primary">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<p class="text-sm font-medium leading-normal">Analytics</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="b.html">
+<span class="material-symbols-outlined">notifications_active</span>
+<p class="text-sm font-medium leading-normal">Alerts</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined">article</span>
+<p class="text-sm font-medium leading-normal">Reports</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-sm font-medium leading-normal">Profile</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex flex-1 flex-col p-6">
+<!-- PageHeading -->
+<div class="mb-6">
+<p class="text-slate-900 dark:text-white text-3xl font-bold leading-tight tracking-tight">Energy Management Dashboard</p>
+</div>
+<!-- 2x2 Grid -->
+<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+<!-- Top-Left Pane: Efficiency KPI -->
+<div class="flex flex-col gap-2 rounded-xl bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-800">
+<p class="text-slate-600 dark:text-slate-400 text-base font-medium leading-normal">Energy Efficiency per Occupied Room</p>
+<p class="text-[#F97316] tracking-tight text-4xl font-bold leading-tight">28.5 kWh</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-medium leading-normal">Goal: &lt; 25 kWh</p>
+</div>
+<!-- Top-Right Pane: Cost KPI -->
+<div class="flex flex-col gap-2 rounded-xl bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-800">
+<p class="text-slate-600 dark:text-slate-400 text-base font-medium leading-normal">Monthly Energy Cost</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-4xl font-bold leading-tight">$ 4.500.000 CLP</p>
+<p class="text-[#10B981] text-base font-medium leading-normal">+3.2% vs. Previous Month</p>
+</div>
+<!-- Bottom-Left Pane: Consumption Trend Chart -->
+<div class="flex flex-col gap-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
+<p class="text-slate-800 dark:text-slate-200 text-base font-medium leading-normal">Total Consumption - Last 30 Days</p>
+<div class="flex items-baseline gap-2">
+<p class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight truncate">15,430 kWh</p>
+<p class="text-[#10B981] text-sm font-medium leading-normal">+1.5%</p>
+</div>
+<div class="flex min-h-[180px] flex-1 flex-col gap-4 py-4">
+<svg fill="none" height="100%" preserveaspectratio="none" viewbox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="chart-gradient" x1="237.5" x2="237.5" y1="1" y2="149">
+<stop stop-color="#3B82F6" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#3B82F6" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0 109C18.2692 109 18.2692 21 36.5385 21C54.8077 21 54.8077 41 73.0769 41C91.3462 41 91.3462 93 109.615 93C127.885 93 127.885 33 146.154 33C164.423 33 164.423 101 182.692 101C200.962 101 200.962 61 219.231 61C237.5 61 237.5 45 255.769 45C274.038 45 274.038 121 292.308 121C310.577 121 310.577 149 328.846 149C347.115 149 347.115 1 365.385 1C383.654 1 383.654 81 401.923 81C420.192 81 420.192 129 438.462 129C456.731 129 456.731 25 475 25V149H0V109Z" fill="url(#chart-gradient)"></path>
+<path d="M0 109C18.2692 109 18.2692 21 36.5385 21C54.8077 21 54.8077 41 73.0769 41C91.3462 41 91.3462 93 109.615 93C127.885 93 127.885 33 146.154 33C164.423 33 164.423 101 182.692 101C200.962 101 200.962 61 219.231 61C237.5 61 237.5 45 255.769 45C274.038 45 274.038 121 292.308 121C310.577 121 310.577 149 328.846 149C347.115 149 347.115 1 365.385 1C383.654 1 383.654 81 401.923 81C420.192 81 420.192 129 438.462 129C456.731 129 456.731 25 475 25" stroke="#3B82F6" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="flex justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal uppercase">Days 1-7</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal uppercase">Days 8-15</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal uppercase">Days 16-23</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal uppercase">Days 24-30</p>
+</div>
+</div>
+</div>
+<!-- Bottom-Right Pane: Action & Navigation -->
+<div class="flex flex-col items-center justify-center gap-6 rounded-xl bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-800">
+<div class="text-primary" data-alt="Bell icon inside a circle">
+<span class="material-symbols-outlined !text-6xl">
+                notifications_active
+              </span>
+</div>
+<div class="flex max-w-[480px] flex-col items-center gap-2 text-center">
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">3 New Alerts</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-normal">
+                Review operational alerts to ensure optimal energy consumption and prevent potential issues.
+              </p>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-wide shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50">
+<span class="truncate">View Operational Alerts</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
