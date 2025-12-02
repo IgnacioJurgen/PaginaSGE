@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
+<html class="light" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Energy Management Dashboard</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <script>
     tailwind.config = {
@@ -14,8 +13,8 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#3B82F6", // Mapped from the user request's blue #3B82F6
-            "background-light": "#f5f7f8", // Using the provided light background
+            "primary": "#3B82F6",
+            "background-light": "#f5f7f8",
             "background-dark": "#101722",
           },
           fontFamily: {
@@ -33,18 +32,13 @@
   </script>
 <style>
     .material-symbols-outlined {
-      font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
     }
-  </style>
+</style>
 </head>
 <body class="font-display bg-background-light dark:bg-background-dark">
 <div class="relative flex min-h-screen w-full flex-col">
 <div class="flex h-full flex-1">
-<!-- SideNavBar -->
 <aside class="flex w-64 flex-col gap-y-6 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark p-4">
 <div class="flex items-center gap-3">
 <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Hotel Ficticia Logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyN-AmDjChoEDE_guzUgcJntKCcEwdmGmTmuGvE_M9ud7phDahhhQnTT9VAMlT15HbueVsyEyJzSswMP0MPNKHEKRDNMWXry18f-p64fbTDu6wmAn-nIa20vOE3xS3rrZfXDrA5YfQySPUUEftKSGhfhbLdaNdvwPh8ge4Z0EcUZCxrwMTZMLRYGbWWz3B83JQMwLPL6VejyWBqldSPxHfjPJQODd_FI9gRFyS1FkbluAxK2cfxLVK32dx2zgQ-gKZW5YthiHSLBqQ');"></div>
@@ -75,39 +69,30 @@
 <p class="text-sm font-medium leading-normal">Settings</p>
 </a>
 </nav>
-<div class="mt-auto flex flex-col gap-1">
-<a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg" href="#">
-<span class="material-symbols-outlined">account_circle</span>
-<p class="text-sm font-medium leading-normal">Profile</p>
-</a>
-</div>
 </aside>
-<!-- Main Content -->
 <main class="flex flex-1 flex-col p-6">
-<!-- PageHeading -->
 <div class="mb-6">
 <p class="text-slate-900 dark:text-white text-3xl font-bold leading-tight tracking-tight">Energy Management Dashboard</p>
 </div>
-<!-- 2x2 Grid -->
 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-<!-- Top-Left Pane: Efficiency KPI -->
 <div class="flex flex-col gap-2 rounded-xl bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-800">
 <p class="text-slate-600 dark:text-slate-400 text-base font-medium leading-normal">Energy Efficiency per Occupied Room</p>
-<p class="text-[#F97316] tracking-tight text-4xl font-bold leading-tight">28.5 kWh</p>
-<p class="text-slate-500 dark:text-slate-400 text-base font-medium leading-normal">Goal: &lt; 25 kWh</p>
+<p class="text-[#F97316] tracking-tight text-4xl font-bold leading-tight">27.8 kWh</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-medium leading-normal">Goal: < 25 kWh</p>
 </div>
-<!-- Top-Right Pane: Cost KPI -->
 <div class="flex flex-col gap-2 rounded-xl bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-800">
 <p class="text-slate-600 dark:text-slate-400 text-base font-medium leading-normal">Monthly Energy Cost</p>
-<p class="text-slate-900 dark:text-white tracking-tight text-4xl font-bold leading-tight">$ 4.500.000 CLP</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-4xl font-bold leading-tight">$ 7.600.500 CLP</p>
 <p class="text-[#10B981] text-base font-medium leading-normal">+3.2% vs. Previous Month</p>
 </div>
-<!-- Bottom-Left Pane: Consumption Trend Chart -->
 <div class="flex flex-col gap-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
 <p class="text-slate-800 dark:text-slate-200 text-base font-medium leading-normal">Total Consumption - Last 30 Days</p>
-<div class="flex items-baseline gap-2">
-<p class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight truncate">15,430 kWh</p>
-<p class="text-[#10B981] text-sm font-medium leading-normal">+1.5%</p>
+<div class="flex items-end gap-3 flex-wrap">
+<p class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight truncate">58.450 kWh</p>
+<div class="flex flex-col justify-end pb-1" > 
+    <span class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wide">Today (Day 30)</span>
+    <span class="text-primary font-bold text-lg leading-none" style="color: brown;">1.850 kWh</span>
+</div>
 </div>
 <div class="flex min-h-[180px] flex-1 flex-col gap-4 py-4">
 <svg fill="none" height="100%" preserveaspectratio="none" viewbox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -117,8 +102,11 @@
 <stop offset="1" stop-color="#3B82F6" stop-opacity="0"></stop>
 </lineargradient>
 </defs>
-<path d="M0 109C18.2692 109 18.2692 21 36.5385 21C54.8077 21 54.8077 41 73.0769 41C91.3462 41 91.3462 93 109.615 93C127.885 93 127.885 33 146.154 33C164.423 33 164.423 101 182.692 101C200.962 101 200.962 61 219.231 61C237.5 61 237.5 45 255.769 45C274.038 45 274.038 121 292.308 121C310.577 121 310.577 149 328.846 149C347.115 149 347.115 1 365.385 1C383.654 1 383.654 81 401.923 81C420.192 81 420.192 129 438.462 129C456.731 129 456.731 25 475 25V149H0V109Z" fill="url(#chart-gradient)"></path>
-<path d="M0 109C18.2692 109 18.2692 21 36.5385 21C54.8077 21 54.8077 41 73.0769 41C91.3462 41 91.3462 93 109.615 93C127.885 93 127.885 33 146.154 33C164.423 33 164.423 101 182.692 101C200.962 101 200.962 61 219.231 61C237.5 61 237.5 45 255.769 45C274.038 45 274.038 121 292.308 121C310.577 121 310.577 149 328.846 149C347.115 149 347.115 1 365.385 1C383.654 1 383.654 81 401.923 81C420.192 81 420.192 129 438.462 129C456.731 129 456.731 25 475 25" stroke="#3B82F6" stroke-linecap="round" stroke-width="3"></path>
+<line x1="0" y1="80" x2="475" y2="80" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"></line>
+<text x="5" y="110" fill="#ef4444" font-size="10" font-weight="600">Threshold: 1.754 kWh</text>
+
+<path d="M 0.0 93.8 C 3.3 92.8, 9.8 90.5, 16.4 88.8 C 22.9 87.0, 26.2 86.5, 32.8 85.0 C 39.3 83.5, 42.6 85.8, 49.1 81.2 C 55.7 76.8, 59.0 67.5, 65.5 62.5 C 72.1 57.5, 75.3 48.8, 81.9 56.2 C 88.4 63.8, 91.7 92.2, 98.3 100.0 C 104.8 107.8, 108.1 96.5, 114.7 95.0 C 121.2 93.5, 124.5 94.2, 131.0 92.5 C 137.6 90.8, 140.9 89.2, 147.4 86.2 C 154.0 83.2, 157.2 86.0, 163.8 77.5 C 170.3 69.0, 173.6 51.8, 180.2 43.8 C 186.7 35.8, 190.0 30.0, 196.6 37.5 C 203.1 45.0, 206.4 69.2, 212.9 81.2 C 219.5 93.2, 222.8 95.0, 229.3 97.5 C 235.9 100.0, 239.1 95.2, 245.7 93.8 C 252.2 92.2, 255.5 91.2, 262.1 90.0 C 268.6 88.8, 271.9 91.8, 278.4 87.5 C 285.0 83.2, 288.3 74.2, 294.8 68.8 C 301.4 63.2, 304.7 53.5, 311.2 60.0 C 317.8 66.5, 321.0 94.0, 327.6 101.2 C 334.1 108.5, 337.4 98.2, 344.0 96.2 C 350.5 94.2, 353.8 92.8, 360.3 91.2 C 366.9 89.8, 370.2 90.0, 376.7 88.8 C 383.3 87.5, 386.6 89.8, 393.1 85.0 C 399.7 80.2, 402.9 69.8, 409.5 65.0 C 416.0 60.2, 419.3 53.8, 425.9 61.2 C 432.4 68.8, 435.7 95.0, 442.2 102.5 C 448.8 110.0, 452.1 100.5, 458.6 98.8 C 465.2 97.0, 471.7 94.8, 475.0 93.8 V 150 H 0 Z" fill="url(#chart-gradient)"></path>
+<path d="M 0.0 93.8 C 3.3 92.8, 9.8 90.5, 16.4 88.8 C 22.9 87.0, 26.2 86.5, 32.8 85.0 C 39.3 83.5, 42.6 85.8, 49.1 81.2 C 55.7 76.8, 59.0 67.5, 65.5 62.5 C 72.1 57.5, 75.3 48.8, 81.9 56.2 C 88.4 63.8, 91.7 92.2, 98.3 100.0 C 104.8 107.8, 108.1 96.5, 114.7 95.0 C 121.2 93.5, 124.5 94.2, 131.0 92.5 C 137.6 90.8, 140.9 89.2, 147.4 86.2 C 154.0 83.2, 157.2 86.0, 163.8 77.5 C 170.3 69.0, 173.6 51.8, 180.2 43.8 C 186.7 35.8, 190.0 30.0, 196.6 37.5 C 203.1 45.0, 206.4 69.2, 212.9 81.2 C 219.5 93.2, 222.8 95.0, 229.3 97.5 C 235.9 100.0, 239.1 95.2, 245.7 93.8 C 252.2 92.2, 255.5 91.2, 262.1 90.0 C 268.6 88.8, 271.9 91.8, 278.4 87.5 C 285.0 83.2, 288.3 74.2, 294.8 68.8 C 301.4 63.2, 304.7 53.5, 311.2 60.0 C 317.8 66.5, 321.0 94.0, 327.6 101.2 C 334.1 108.5, 337.4 98.2, 344.0 96.2 C 350.5 94.2, 353.8 92.8, 360.3 91.2 C 366.9 89.8, 370.2 90.0, 376.7 88.8 C 383.3 87.5, 386.6 89.8, 393.1 85.0 C 399.7 80.2, 402.9 69.8, 409.5 65.0 C 416.0 60.2, 419.3 53.8, 425.9 61.2 C 432.4 68.8, 435.7 95.0, 442.2 102.5 C 448.8 110.0, 452.1 100.5, 458.6 98.8 C 465.2 97.0, 471.7 94.8, 475.0 93.8" stroke="#3B82F6" stroke-linecap="round" stroke-width="2.5"></path>
 </svg>
 <div class="flex justify-between">
 <p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal uppercase">Days 1-7</p>
@@ -128,7 +116,6 @@
 </div>
 </div>
 </div>
-<!-- Bottom-Right Pane: Action & Navigation -->
 <div class="flex flex-col items-center justify-center gap-6 rounded-xl bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-800">
 <div class="text-primary" data-alt="Bell icon inside a circle">
 <span class="material-symbols-outlined !text-6xl">
